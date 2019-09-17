@@ -22,7 +22,7 @@ docker run <imageId>
 ```
 
 This will show an error because the database is not running yet.
-Posgres and Redis are not running yet.
+Postgres and Redis are not running yet.
 
 ### Create the docker container for the worker (Node apps)
 
@@ -33,4 +33,12 @@ docker build -f Dockerfile.dev .
 ```
 ```
 docker run <imageId>
+```
+
+### Docker-Compose process
+
+In the root folder execute
+
+```
+docker-compose up
 ```
