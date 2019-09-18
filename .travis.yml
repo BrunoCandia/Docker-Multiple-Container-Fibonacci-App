@@ -6,7 +6,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t brunocandia/react-test -f .client/Dockerfile.dev ./client
+  - docker build -t brunocandia/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true brunocandia/react-test npm run test
@@ -25,4 +25,4 @@ after_success:
   - docker push brunocandia/docker-multiple-container-fibonacci-nginx
   - docker push brunocandia/docker-multiple-container-fibonacci-server
   - docker push brunocandia/docker-multiple-container-fibonacci-worker
-  
+
