@@ -53,3 +53,12 @@ docker-compose up
 5. travis pushes built prod images to Docker Hub
 6. Travis pushes project to AWS EB
 7. EB pulls images from Docker Hub and deploys
+
+### Travis flow
+
+1. Specify docker as a dependency
+2. Build test version of React project(use the development docker file because only this file has all the source code required for running the tests)
+3. Run tests
+4. Build prod versions of all projects
+5. Push all to Docker Hub
+6. Tell EB to update
