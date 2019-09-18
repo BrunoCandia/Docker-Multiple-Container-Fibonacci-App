@@ -1,3 +1,4 @@
+### Docker-CLI process for development.
 ### Execute the development docker files
 ### Create the docker container for the client (React app)
 
@@ -35,7 +36,7 @@ docker build -f Dockerfile.dev .
 docker run <imageId>
 ```
 
-### Docker-Compose process
+### Docker-Compose process for development
 
 In the root folder execute
 
