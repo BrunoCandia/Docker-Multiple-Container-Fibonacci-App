@@ -42,3 +42,13 @@ In the root folder execute
 ```
 docker-compose up
 ```
+
+### Production Multiple-Container deployments flow
+
+1. Push code to github
+2. Travis automatically pulls repo
+3. Travis builds a test image, tests code
+4. Travis builds prod images
+5. travis pushes built prod images to Docker Hub
+6. Travis pushes project to AWS EB
+7. EB pulls images from Docker Hub and deploys
